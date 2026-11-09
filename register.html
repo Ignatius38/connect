@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Connect</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="brand">Connect</a>
+    <div class="nav-links">
+      <a href="login.html">Log In</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="auth-card">
+      <h2 style="margin-bottom: 0.5rem; text-align: center;">Create Account</h2>
+      <p style="color: var(--text-muted); text-align: center; margin-bottom: 1.5rem; font-size: 0.9rem;">Join as a student mentee or industry mentor</p>
+
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" class="form-control" required placeholder="John Doe">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" required placeholder="name@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="role">I am joining as a:</label>
+          <select id="role" class="form-control" required>
+            <option value="student">Student / Aspirant</option>
+            <option value="mentor">Professional Mentor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" required placeholder="••••••••">
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Register</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

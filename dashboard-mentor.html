@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentor Dashboard | Connect</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="brand">Connect</a>
+    <div class="nav-links">
+      <a href="index.html" class="btn btn-outline">Log Out</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2 style="margin-bottom: 2rem;">Incoming Requests</h2>
+    
+    <div class="card" style="margin-bottom: 1rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+        <div>
+          <h3 class="card-title">John Doe</h3>
+          <p class="card-subtitle" style="margin: 0;">Student / Aspirant</p>
+        </div>
+        <span class="badge badge-pending">Pending</span>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+        "Hello! I am a junior looking to improve my full-stack skills. I would love to connect and get some advice on my current portfolio."
+      </p>
+      <div style="display: flex; gap: 0.5rem;">
+        <button class="btn btn-primary" onclick="alert('Request Accepted!')">Accept</button>
+        <button class="btn btn-danger" onclick="alert('Request Declined')">Decline</button>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
