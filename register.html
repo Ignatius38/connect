@@ -31,12 +31,31 @@
           <input type="email" id="email" class="form-control" required placeholder="name@example.com">
         </div>
 
+        
         <div class="form-group">
           <label for="role">I am joining as a:</label>
           <select id="role" class="form-control" required>
             <option value="student">Student / Aspirant</option>
             <option value="mentor">Professional Mentor</option>
           </select>
+        </div>
+
+        <!-- Shown only when "Professional Mentor" is selected -->
+        <div id="mentorFields" style="display: none;">
+          <div class="form-group">
+            <label for="industry">Industry</label>
+            <input type="text" id="industry" class="form-control" placeholder="e.g. Technology, Finance, Data">
+          </div>
+
+          <div class="form-group">
+            <label for="job_role">Current Job Title</label>
+            <input type="text" id="job_role" class="form-control" placeholder="e.g. Senior Software Engineer">
+          </div>
+
+          <div class="form-group">
+            <label for="bio">Short Bio & Mentorship Focus</label>
+            <textarea id="bio" class="form-control" rows="3" placeholder="Briefly describe your experience and how you can help students..."></textarea>
+          </div>
         </div>
 
         <div class="form-group">
@@ -48,7 +67,7 @@
       </form>
     </div>
   </main>
-
+  <script src="assets/js/accessibility.js"></script>
   <script src="assets/js/auth.js"></script>
 </body>
 </html>
