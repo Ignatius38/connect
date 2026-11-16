@@ -1,34 +1,3 @@
-/* Mobile Optimization */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .nav-links {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  
-  .nav-links a {
-    text-align: center;
-  }
-
-  /* Shrinks buttons slightly on small screens */
-  .btn {
-    padding: 0.5rem 1rem; 
-  }
-
-  /* Ensures the two hero buttons stack if the screen is too narrow */
-  main div[style*="display: flex"] {
-    flex-wrap: wrap;
-  }
-}
-
-
 :root {
   --primary: #2563eb;
   --primary-hover: #1d4ed8;
@@ -89,6 +58,14 @@ body {
 
 .nav-links a:hover {
   color: var(--primary);
+}
+
+.nav-links a.btn-primary {
+  color: #ffffff;
+}
+
+.nav-links a.btn-outline {
+  color: var(--text-dark);
 }
 
 /* Base Layout Containers */
@@ -230,10 +207,88 @@ body {
   color: #b91c1c;
 }
 
-.nav-links a.btn-primary {
-  color: #ffffff;
+/* =========================================
+   Toggleable Keyboard & Focus Accessibility
+   ========================================= */
+
+.a11y-toggle {
+  background: var(--bg-main);
+  color: var(--text-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.nav-links a.btn-outline {
-  color: var(--text-dark);
+.a11y-toggle:hover {
+  border-color: var(--primary);
+}
+
+.a11y-toggle[aria-pressed="true"] {
+  background: #0f172a;
+  color: #facc15;
+  border-color: #0f172a;
+}
+
+/* Skip Link (Hidden off-screen until Tab is pressed) */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: #0f172a;
+  color: #facc15;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 1000;
+  transition: top 0.2s ease;
+}
+
+body.focus-assist .skip-link:focus {
+  top: 1rem;
+}
+
+/* High-Visibility Focus Indicators (Active when Focus Mode is ON) */
+body.focus-assist a:focus,
+body.focus-assist button:focus,
+body.focus-assist input:focus,
+body.focus-assist select:focus {
+  outline: 3px solid #f59e0b !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 5px rgba(245, 158, 11, 0.25);
+}
+
+/* =========================================
+   Mobile Optimization (Must stay at bottom)
+   ========================================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .nav-links a {
+    text-align: center;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem; 
+  }
+
+  main div[style*="display: flex"] {
+    flex-wrap: wrap;
+  }
 }
