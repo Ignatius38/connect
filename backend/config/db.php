@@ -1,12 +1,12 @@
 <?php
-$host = 'localhost';
-$dbname = 'proconnect_db';
-$username = 'root';
-$password = ''; // Default XAMPP MySQL password is blank
+$host = 'sql204.infinityfree.com';
+$dbname = 'if0_43473239_if0_37812345_proconnect';
+$username = 'if0_43473239';
+$password = '8tM9TN4ydmWvfS';
 
 try {
     $pdo = new PDO(
-        "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
+        "mysql:host=$host;port=3306;dbname=$dbname;charset=utf8mb4",
         $username,
         $password,
         [
